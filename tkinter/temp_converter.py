@@ -32,3 +32,5 @@ btn_cel.grid(row=2, column=0)
 
 btn_fah = tk.Button(master=windows, text="To Fahrenheit", command=to_fah)
 btn_fah.grid(row=2, column=1)
+
+windows.mainloop()
