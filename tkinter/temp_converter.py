@@ -1,14 +1,20 @@
 import tkinter as tk
 
 def to_fah():
-    deg = float(ent.get())
-    deg = round((deg*9/5)+32, 2)
-    answer["text"] = f"{deg}" + " F"
+    if not ent.get().isdigit():
+        answer["text"] = "Error."
+    else:
+        deg = float(ent.get())
+        deg = round((deg*9/5)+32, 2)
+        answer["text"] = f"{deg}" + " F"
 
 def to_cel():
-    deg = float(ent.get())
-    deg = round((deg-32)*5/9, 2)
-    answer["text"] = f"{deg}" + " C"
+    if not ent.get().isdigit():
+        answer["text"] = "Error."
+    else:
+        deg = float(ent.get())
+        deg = round((deg-32)*5/9, 2)
+        answer["text"] = f"{deg}" + " C"
 
 windows = tk.Tk()
 windows.title("Temperature Converter")
@@ -27,10 +33,10 @@ result.grid(row=1, column=0, sticky="e")
 answer = tk.Label(master=windows, text="")
 answer.grid(row=1, column=1)
 
-btn_cel = tk.Button(master=windows, text="To Celsius", command=to_cel)
+btn_cel = tk.Button(master=windows, text="°F to °C", command=to_cel)
 btn_cel.grid(row=2, column=0)
 
-btn_fah = tk.Button(master=windows, text="To Fahrenheit", command=to_fah)
+btn_fah = tk.Button(master=windows, text="°C to °F", command=to_fah)
 btn_fah.grid(row=2, column=1)
 
 windows.mainloop()
