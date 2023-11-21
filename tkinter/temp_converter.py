@@ -1,19 +1,21 @@
 import tkinter as tk
 
 def to_fah():
-    if not ent.get().isdigit():
-        answer["text"] = "Error."
-    else:
+    try:
         deg = float(ent.get())
         deg = round((deg*9/5)+32, 2)
+    except:
+        answer["text"] = "Error."
+    else:
         answer["text"] = f"{deg}" + " F"
 
 def to_cel():
-    if not ent.get().isdigit():
-        answer["text"] = "Error."
-    else:
+    try:
         deg = float(ent.get())
         deg = round((deg-32)*5/9, 2)
+    except:
+        answer["text"] = "Error."
+    else:
         answer["text"] = f"{deg}" + " C"
 
 windows = tk.Tk()
