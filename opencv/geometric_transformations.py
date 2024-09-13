@@ -1,4 +1,4 @@
-#performing rotation, scaling and zooming on an image
+#program to perform rotation, scaling and zooming on an image
 
 import cv2
 import numpy as np
