@@ -1,3 +1,5 @@
+#program to split an iamge into foue equal parts
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
