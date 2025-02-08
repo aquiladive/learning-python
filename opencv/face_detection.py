@@ -1,3 +1,5 @@
+#program to detect faces in images using cascade classifier
+
 import cv2
 
 face_cascade = cv2.CascadeClassifier(cv2.data_haarcascade+"haarcasecade_frontalface_default.xml")
