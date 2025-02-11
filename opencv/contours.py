@@ -1,3 +1,5 @@
+#program to find and highlight contours in an image
+
 import cv2
 import numpy as np
 img = cv2.imread("rabbit.png")
